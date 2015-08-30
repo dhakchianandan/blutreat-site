@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Blutreat
+        link(href="css/style.css", rel="stylesheet")
+    body
+        include 2-mixins/_mixins
+        .container-fluid
+            include 1-layout/_header
+        .container-fluid.banner-content
+            include 1-layout/_carousel
+        .container
+            .row
+                .col-md-12
+                    p.lead.text-center.highlight-content
+                        | Come experience the world with one of <span>the best builders</span> in tamil nadu
+
+            .row
+                .col-md-12
+                    p.intro-text
+                        | M/s Blutreat Innovative Chemicals , Headquartered in Chennai, are the authorized distributors for M/s. BASF India ltd
+                        | for their Master Builders solutions range of construction chemicals and M/s. HB FULLER for their industrial adhesives.
+                        | With over 3 Decades of experience in distribution and competencies in handling construction chemicals and industrial
+                        | adhesives, we have technically qualified and well-experienced team of professionals contributing at every stage of
+                        | development thereby ensuring management core focus "Value for Customers" leading to innovative solutions involving principals.
+
+            .row.main-products
+                .col-md-3
+                    .thumbnail.service
+                        img(src="img/admixtures.png").img-responsive
+                        .caption
+                            p.heading Admixtures
+                            p.text-center
+                                | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                | standard dummy text ever since the 1500s.
+
+                .col-md-3
+                    .thumbnail.service
+                        img(src="img/sealants.png").img-responsive
+                        .caption
+                            p.heading Sealants
+                            p.text-center
+                                | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                | standard dummy text ever since the 1500s.
+                .col-md-3
+                    .thumbnail.service
+                        img(src="img/flooring.png").img-responsive
+                        .caption
+                            p.heading Flooring
+                            p.text-center
+                                | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                | standard dummy text ever since the 1500s.
+
+                .col-md-3
+                    .thumbnail.service
+                        img(src="img/waterproofing.png").img-responsive
+                        .caption
+                            p.heading Water Proofing
+                            p.text-center
+                                | Lorem Ipsum is simply text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                | standard dummy text ever since the 1500s.
+
+
+            p.hidden Thanks for making me awesome guys
+            ul.hidden
+                +contribution("gulp-jade")
+                +contribution("gulp-sass")
+                +contribution("gulp-autoprefixer")
+                +contribution("browser-sync")
+        .container-fluid
+            include 1-layout/_footer
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+        script(src="js/blutreat.js")
+        script(type='text/javascript').
+            $(function() {
+                highlightNav("index.html");
+            });

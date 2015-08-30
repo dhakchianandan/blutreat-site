@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Blutreat
+        link(href="css/style.css", rel="stylesheet")
+    body
+        include 2-mixins/_mixins
+        .container-fluid
+            include 1-layout/_header
+        .container-fluid.banner-content
+            include 1-layout/_carousel
+        .container
+            .row
+                .col-md-12
+                    p.lead.text-center.highlight-content
+                        | We've got <span>everything</span> you need!!
+            .row
+                .col-md-8.col-md-offset-2
+                    p.intro-text
+                        | With complete compliance to statutory and labour laws, timely completion of works, huge labour base and
+                        | prompt supplies of material has made BLUTREAT the first choice for customers.
+
+            .main-products
+                .row
+                    include 1-layout/_product
+                    include 1-layout/_product
+                    include 1-layout/_product
+
+                .row
+                    include 1-layout/_product
+                    include 1-layout/_product
+                    include 1-layout/_product
+
+        .container-fluid
+            include 1-layout/_footer
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+        script(src="js/blutreat.js")
+        script(type='text/javascript').
+            $(function() {
+                highlightNav("products.html");
+            });

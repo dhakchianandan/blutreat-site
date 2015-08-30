@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Blutreat
+        link(href="css/style.css", rel="stylesheet")
+    body
+        include 2-mixins/_mixins
+        .container-fluid
+            include 1-layout/_header
+        .container-fluid.banner-content
+            include 1-layout/_carousel
+        .container
+            .row
+                .col-md-12
+                    p.lead.text-center.highlight-content
+                        | Our <span>clients</span> are our biggest supporters
+
+            .row
+                .col-md-12
+                    p.intro-text
+                        | Would you like to know what our clients and what they think about us?
+                        | Take a look for yourslef in the testimonals below.
+
+        .container.main-customers
+            .row
+                include 1-layout/_customer
+                include 1-layout/_customer
+                include 1-layout/_customer
+                include 1-layout/_customer
+                include 1-layout/_customer
+                include 1-layout/_customer
+                include 1-layout/_customer
+                include 1-layout/_customer
+
+        .container-fluid
+            include 1-layout/_footer
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+        script(src="js/blutreat.js")
+        script(type='text/javascript').
+            $(function () {
+                highlightNav("customers.html");
+            });
